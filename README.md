@@ -1,8 +1,7 @@
 # ckanext-googledocs
 
-This plugin provides the option of using the [Microsoft Office Web
-Viewer](https://www.microsoft.com/en-us/microsoft-365/blog/2013/04/10/office-web-viewer-view-office-documents-in-a-browser/)
-for previewing both MS Office and OpenOffice documents as an
+This plugin provides the option of using the Google Docs Web
+for previewing documents as an
 IResourceView
 
 ## Supported formats
