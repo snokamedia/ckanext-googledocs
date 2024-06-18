@@ -9,22 +9,22 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name='''ckanext-officedocs''',
+    name='''ckanext-googledocs''',
 
     # Versions should comply with PEP440.  For a discussion on single-sourcing
     # the version across setup.py and the project code, see
     # http://packaging.python.org/en/latest/tutorial.html#version
     version='1.1.0',
 
-    description='''A ResourceView that uses Microsoft's Doc preview''',
+    description='''A ResourceView that uses Google's Doc preview''',
     long_description=long_description,
 
     # The project's main homepage.
-    url='https://github.com/rossjones/ckanext-officedocs',
+    url='https://github.com/snokamedia/ckanext-googledocs',
 
     # Author details
-    author='''Ross Jones, Joel Natividad''',
-    author_email='''ross@servercode.co.uk, joel@dathere.com''',
+    author='''Snoka Media''',
+    author_email='''info@snoka.ca''',
 
     # Choose your license
     license='AGPL',
@@ -48,7 +48,7 @@ setup(
 
 
     # What does your project relate to?
-    keywords='''CKAN officedocs preview''',
+    keywords='''CKAN googledocs preview''',
 
     # You can just specify the packages manually here if your project is
     # simple. Or you can use find_packages().
@@ -78,6 +78,6 @@ setup(
     # pip to create the appropriate form of executable for the target platform.
     entry_points='''
         [ckan.plugins]
-        officedocs_view=ckanext.officedocs.plugin:OfficeDocsPlugin
+        googledocs_view=ckanext.googledocs.plugin:googledocsPlugin
     ''',
 )

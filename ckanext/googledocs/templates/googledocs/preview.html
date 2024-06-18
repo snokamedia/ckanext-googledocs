@@ -1,5 +1,5 @@
 <button id="fullscreeniframe" class="btn" style="position:absolute; right:5px; top:20px">Fullscreen</button>
-<iframe id="cvframe" src="//view.officeapps.live.com/op/view.aspx?src={{resource_url}}" frameborder="0" allowfullscreen="" width="100%" height="400px"></iframe>
+<iframe id="cvframe" src="https://docs.google.com/viewer?url={{resource_url}}&embedded=true" frameborder="0" allowfullscreen="" width="100%" height="400px"></iframe>
 <script>
 // http://stackoverflow.com/questions/18901847/iframe-enter-fullscreen-mode
 (function(window, document){
@@ -30,7 +30,7 @@
         // Webkit uses "requestFullScreen" for non video elements
         var fullscreenother = fullscreen(document.createElement("iframe"));
 
-        if(!fullscreen) {
+        if(!fullscreenother) {
             alert("Fullscreen won't work, please make sure you're using a browser that supports it and you have enabled the feature");
             return;
         }

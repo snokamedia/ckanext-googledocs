@@ -5,21 +5,20 @@ import ckan.plugins.toolkit as tk
 from six.moves.urllib.parse import quote_plus
 
 
-class OfficeDocsPlugin(p.SingletonPlugin):
+class googledocsPlugin(p.SingletonPlugin):
     p.implements(p.IConfigurer)
     p.implements(p.IResourceView)
 
     def update_config(self, config_):
         tk.add_template_directory(config_, "templates")
         tk.add_public_directory(config_, "public")
-        tk.add_resource("fanstatic", "officedocs")
+        tk.add_resource("fanstatic", "googledocs")
 
     def info(self):
         return {
-            "name": "officedocs_view",
-            "title": tk._("Office Previewer"),
+            "name": "googledocs_view",
+            "title": tk._("Google Docs Previewer"),
             "default_title": tk._("Preview"),
-            "icon": "windows",
             "always_available": False,
             "iframed": False,
         }
@@ -34,7 +33,7 @@ class OfficeDocsPlugin(p.SingletonPlugin):
         supported_formats = [
             "DOC", "DOCX", "XLS",
             "XLSX", "XLSB", "PPT", "PPTX",
-            "PPS", "PPSX", "ODT", "ODS", "ODP"
+            "PPS", "PPSX", "ODT", "ODS", "ODP", "TIFF"
         ]
         try:
             pkg_private = data_dict.get("package",{}).get("private", False)
@@ -47,7 +46,7 @@ class OfficeDocsPlugin(p.SingletonPlugin):
             return False
 
     def view_template(self, context, data_dict):
-        return "officedocs/preview.html"
+        return "googledocs/preview.html"
 
     def form_template(self, context, data_dict):
-        return "officedocs/form.html"
+        return "googledocs/form.html"
